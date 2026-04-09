@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AnimalVerse – Explore the Animal Kingdom</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="AppIcon.png">
+</head>
+
+<body>
+
+    <!-- Animated background -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- NAVBAR -->
+    <nav id="navbar">
+        <a href="#hero" class="nav-logo"><img src="AppIcon.png" alt="AnimalVerse Icon" class="nav-logo-img" />
+            AnimalVerse</a>
+        <div style="display: flex; align-items: center; gap: 28px;">
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about">About</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#privacy">Privacy</a></li>
+                <li><a href="#terms">Terms</a></li>
+            </ul>
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode" style="margin-left: 8px;">
+                <span class="icon-sun">☀️</span>
+                <span class="icon-moon">🌙</span>
+            </button>
+            <div class="burger" id="burger" onclick="toggleMenu()" style="margin-left: 8px;">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="hero">
+        <div class="hero-badge">🏆 Built with SwiftUI + ARKit</div>
+        <img src="AppIcon.png" alt="AnimalVerse App Icon" class="hero-icon" />
+        <h1 class="hero-title">AnimalVerse</h1>
+        <p class="hero-tagline">Explore the Animal Kingdom through immersive AR, gamified quizzes, and a vibrant
+            interactive encyclopedia — built for curious kids.</p>
+        <div class="cta-row">
+            <a href="#" class="btn-store-badge">
+                <img src="black.svg" class="store-badge-light" alt="Download on the App Store" />
+                <img src="white.svg" class="store-badge-dark" alt="Download on the App Store" />
+            </a>
+            <a href="#about" class="btn-outline">✨ Explore Features</a>
+        </div>
+        <div class="hero-animals">
+            <span>🐘</span><span>🦋</span><span>🐬</span><span>🦅</span><span>🐆</span><span>🦎</span><span>🐸</span><span>🦈</span>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+        <div class="about-grid">
+            <div class="about-visual">
+                <div class="about-blob"><img src="AppIcon.png" alt="App Icon" class="blob-icon" /></div>
+                <div class="floating-chip chip-1">🧬 Scientific Names</div>
+                <div class="floating-chip chip-2">🏆 Badge System</div>
+                <div class="floating-chip chip-3">🎮 Mini-Games</div>
+            </div>
+            <div class="about-text reveal">
+                <span class="section-label">About the App</span>
+                <h2 class="section-title">A Wild World in Your Pocket</h2>
+                <p class="section-sub">AnimalVerse is a premium interactive iOS app that transforms how kids discover
+                    the animal kingdom. Powered by SwiftUI and ARKit, it blends learning with play through a gorgeous
+                    "Liquid Glass" design that kids absolutely love.</p>
+                <p class="section-sub" style="margin-top:14px">Explore over 5 animal categories, unlock badges, ace
+                    quizzes, and place life-size 3D animals in your own living room — all without any account or
+                    personal data required.</p>
+                <div class="about-pills">
+                    <span class="pill pill-green">🐾 Mammals</span>
+                    <span class="pill pill-blue">🐦 Birds</span>
+                    <span class="pill pill-orange">🦎 Reptiles</span>
+                    <span class="pill pill-purple">🐸 Amphibians</span>
+                    <span class="pill pill-blue">🐟 Fish</span>
+                    <span class="pill pill-yellow">🌿 100% Kid-Safe</span>
+                    <span class="pill pill-pink">🔒 No Account Needed</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section id="features">
+        <div class="features-header reveal">
+            <span class="section-label">Core Features</span>
+            <h2 class="section-title">Everything Kids Need to Explore</h2>
+            <p class="section-sub">Four powerful experiences — all wrapped in a stunning Liquid Glass interface designed
+                for joy and discovery.</p>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-card reveal">
+                <div class="feature-icon fi-green">📖</div>
+                <h3 class="feature-title">Animal Encyclopedia</h3>
+                <p class="feature-desc">Explore hundreds of animals categorized by type. Each entry features scientific
+                    name, diet, conservation status, habitat, and fun facts — all in beautifully crafted glass cards.
+                </p>
+            </div>
+            <div class="feature-card reveal">
+                <div class="feature-icon fi-blue">🥽</div>
+                <h3 class="feature-title">AR Experiences</h3>
+                <p class="feature-desc">Place life-size 3D animal models in your room and visualize complete food chains
+                    in augmented reality. Learning has never felt this real or this magical.</p>
+            </div>
+            <div class="feature-card reveal">
+                <div class="feature-icon fi-orange">🎮</div>
+                <h3 class="feature-title">Gamified Quizzes</h3>
+                <p class="feature-desc">Sound Quiz, Word Jumble, and Category Quiz keep kids engaged and learning.
+                    Identify animals by their real calls, unscramble names, and test your knowledge of animal traits.
+                </p>
+            </div>
+            <div class="feature-card reveal">
+                <div class="feature-icon fi-purple">🏆</div>
+                <h3 class="feature-title">Badges & Progress</h3>
+                <p class="feature-desc">A persistent badge system rewards exploration and quiz completions. Progress is
+                    saved locally — no account needed. The more you explore, the more you earn!</p>
+            </div>
+            <!-- <div class="feature-card reveal">
+                <div class="feature-icon fi-yellow">🔍</div>
+                <h3 class="feature-title">Smart Search</h3>
+                <p class="feature-desc">Instantly find any animal by name, category, or habitat. Beautiful filter chips
+                    and smooth animations make browsing the animal kingdom an absolute delight.</p>
+            </div> -->
+            <div class="feature-card reveal">
+                <div class="feature-icon fi-pink">🎨</div>
+                <h3 class="feature-title">Liquid Glass Design</h3>
+                <p class="feature-desc">Built with glassmorphism and full Dark Mode support. Dynamic color themes for
+                    each category, animated mesh backgrounds, and confetti celebrations for achievements.</p>
+            </div>
+        </div>
+
+        <!-- AR Strip -->
+        <div class="ar-strip reveal">
+            <div class="ar-text">
+                <span class="ar-badge">🥽 ARKit + RealityKit</span>
+                <h3>See Animals Come Alive in Your World</h3>
+                <p>Place a full-scale elephant in your living room or build a complete food chain on your kitchen table.
+                    AnimalVerse's AR experiences make the animal kingdom tangible and unforgettable.</p>
+            </div>
+            <div class="ar-emojis">
+                <span>🦁</span><span>🌿</span><span>🥽</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- TEAM -->
+    <section id="team">
+        <div class="team-header reveal">
+            <span class="section-label">The Team</span>
+            <h2 class="section-title">The People Behind AnimalVerse</h2>
+            <p class="section-sub">Built with passion, precision, and a love for making learning magical for kids.</p>
+        </div>
+
+        <div class="team-grid">
+            <!-- Developer -->
+            <div class="team-card reveal">
+                <div class="team-avatar avatar-green">SO</div>
+                <h3 class="team-name">Shivansh Omer</h3>
+                <div class="team-role role-dev">Developer & Designer</div>
+                <p class="team-bio">An ambitious iOS developer with a passion for crafting beautiful, kid-friendly app
+                    experiences. Shivansh combines SwiftUI craftsmanship with a sharp eye for design — turning complex
+                    ideas into delightful, accessible products that genuinely make learning fun.</p>
+                <a href="https://www.linkedin.com/in/shivansh-omer-b738a9278/" target="_blank" class="team-link">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                    </svg>
+                    LinkedIn
+                </a>
+            </div>
+
+            <!-- Mentor -->
+            <div class="team-card reveal">
+                <div class="team-avatar avatar-purple">PS</div>
+                <h3 class="team-name">Dr. Probeer Sahw</h3>
+                <div class="team-role role-mentor">Mentor & Academic Guide</div>
+                <p class="team-bio">A dedicated faculty member whose mentorship shaped the vision and direction of
+                    AnimalVerse. Dr. Sahw provided invaluable technical insight, academic guidance, and unwavering
+                    support throughout the entire development journey — from concept to launch.</p>
+                <a href="https://www.linkedin.com/in/probeer-sahw/" target="_blank" class="team-link">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                    </svg>
+                    LinkedIn
+                </a>
+            </div>
+        </div>
+
+        <p class="team-uni reveal" style="margin-top:48px">
+            Developed at <a href="https://www.galgotiasuniversity.edu.in/" target="_blank">Galgotias University</a>
+            &nbsp;·&nbsp;
+            For support, reach out at <a href="mailto:shivanshomer11a@gmail.com"
+                style="color:var(--green)">shivanshomer11a@gmail.com</a>
+        </p>
+    </section>
+
+    <!-- PRIVACY POLICY -->
+    <section id="privacy">
+        <div class="legal-wrap">
+            <div class="reveal" style="margin-bottom:32px">
+                <span class="section-label">Legal</span>
+                <h2 class="section-title">Privacy Policy</h2>
+            </div>
+            <div class="legal-card reveal">
+                <span class="legal-date">AnimalVerse · Last updated: April 7, 2026</span>
+
+                <h3>Introduction</h3>
+                <p>AnimalVerse ("the App") is designed to help children explore and learn about the animal kingdom in a
+                    safe, interactive environment. Your privacy matters deeply to us. This Privacy Policy explains how
+                    information is handled when you use the App.</p>
+
+                <h3>Information We Collect</h3>
+                <p>The App does not collect, store, transmit, or share any personal information. Specifically:</p>
+                <ul>
+                    <li>No account creation is required</li>
+                    <li>No personal information is requested</li>
+                    <li>No location data is collected</li>
+                    <li>No contact information is collected</li>
+                    <li>No device identifiers are stored or transmitted</li>
+                    <li>No analytics or third-party tracking tools are used</li>
+                </ul>
+
+                <h3>Local Data Storage</h3>
+                <p>The App may store certain information locally on your device only, such as explored animals, quiz
+                    scores, badge progress, and user preferences. This data remains entirely on your device and is never
+                    transmitted to any server.</p>
+
+                <h3>Permissions Usage</h3>
+                <p>The App may request access to certain device features, such as the camera, to enable augmented
+                    reality (AR) experiences. These features are used only for app functionality and no data is
+                    collected, stored, or transmitted.</p>
+
+                <h3>Data Transmission</h3>
+                <p>The App does not transmit any data over the internet. All functionality works locally on the device.
+                </p>
+
+                <h3>Third-Party Services</h3>
+                <p>The App does not use third-party analytics, advertising networks, or tracking services of any kind.
+                </p>
+
+                <h3>Children's Privacy</h3>
+                <p>The App does not collect personal information from anyone, including children under the age of 13.
+                    Since no personal data is collected whatsoever, the App is entirely safe for use by children of all
+                    ages. Parents and guardians can feel confident that the App does not collect any personal data. If
+                    you have any concerns, you may contact us at the email below.</p>
+
+                <h3>Changes to This Policy</h3>
+                <p>This Privacy Policy may be updated occasionally. Any changes will be reflected by updating the "Last
+                    updated" date at the top of this page.</p>
+
+                <h3>Contact</h3>
+                <p>Developer: Shivansh Omer · <a href="mailto:shivanshomer11a@gmail.com"
+                        style="color:var(--green); font-weight:700;">shivanshomer11a@gmail.com</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- TERMS OF USE -->
+    <section id="terms">
+        <div class="legal-wrap">
+            <div class="reveal" style="margin-bottom:32px">
+                <span class="section-label">Legal</span>
+                <h2 class="section-title">Terms of Use</h2>
+            </div>
+            <div class="legal-card reveal">
+                <span class="legal-date">AnimalVerse · Last updated: April 7, 2026</span>
+
+                <h3>Acceptance of Terms</h3>
+                <p>By downloading or using AnimalVerse ("the App"), you agree to these Terms of Use. If you do not agree
+                    with these terms, please do not use the App.</p>
+
+                <h3>Use of the App</h3>
+                <p>The App is provided for educational and entertainment purposes to help users — especially children —
+                    explore and learn about the animal kingdom. You agree to use the App in a lawful manner and not
+                    attempt to misuse or interfere with its functionality.</p>
+
+                <h3>Parental Guidance</h3>
+                <p>The App is designed for children. Parents or guardians are encouraged to supervise children while
+                    using the App.</p>
+
+                <h3>No Account Requirement</h3>
+                <p>The App does not require users to create an account or provide any personal information. All progress
+                    is saved locally on your device.</p>
+
+                <h3>Intellectual Property</h3>
+                <p>All content in the App — including design, graphics, UI, 3D assets, quiz content, and educational
+                    materials — is the property of the developer unless otherwise stated. You may not copy, reproduce,
+                    or redistribute any App content without explicit written permission.</p>
+
+                <h3>Disclaimer</h3>
+                <p>The App is provided "as is" without warranties of any kind. While every effort is made to ensure
+                    accuracy of all animal information, the developer does not guarantee that all content is completely
+                    error-free.</p>
+
+                <h3>Limitation of Liability</h3>
+                <p>The developer shall not be held responsible for any direct or indirect damages resulting from the use
+                    or inability to use the App.</p>
+
+                <h3>Changes to the Terms</h3>
+                <p>These Terms may be updated from time to time. Continued use of the App after any changes constitutes
+                    your acceptance of the updated Terms.</p>
+
+                <h3>Contact</h3>
+                <p>Developer: Shivansh Omer · <a href="mailto:shivanshomer11a@gmail.com"
+                        style="color:var(--green); font-weight:700;">shivanshomer11a@gmail.com</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <span class="footer-logo"><img src="AppIcon.png" alt="AnimalVerse Icon" class="footer-logo-img" />
+            AnimalVerse</span>
+        <p class="footer-tagline">Explore the Animal Kingdom — one discovery at a time.</p>
+        <div class="footer-links">
+            <a href="#about">About</a>
+            <a href="#features">Features</a>
+            <a href="#team">Team</a>
+            <a href="#privacy">Privacy Policy</a>
+            <a href="#terms">Terms of Use</a>
+        </div>
+        <div class="footer-divider"></div>
+        <p class="footer-bottom">© 2026 Shivansh Omer. All rights reserved.</p>
+        <p class="footer-contact"><a href="mailto:shivanshomer11a@gmail.com">shivanshomer11a@gmail.com</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
