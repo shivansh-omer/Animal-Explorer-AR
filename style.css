@@ -25,7 +25,7 @@
         }
 
         body {
-            font-family: 'Nunito', sans-serif;
+            font-family: "SF Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             color: var(--text);
             background: #f0faf4;
             overflow-x: hidden;
@@ -60,7 +60,7 @@
         }
 
         .nav-logo {
-            font-family: 'Fredoka One', cursive;
+            font-family: "SF Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             font-size: 1.6rem;
             color: var(--green);
             display: flex;
@@ -149,7 +149,7 @@
         }
 
         .hero-title {
-            font-family: 'Fredoka One', cursive;
+            font-family: "SF Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             font-size: clamp(3rem, 8vw, 6rem);
             line-height: 1.05;
             background: linear-gradient(135deg, var(--green) 0%, var(--blue) 50%, var(--purple) 100%);
@@ -307,7 +307,7 @@
         }
 
         .section-title {
-            font-family: 'Fredoka One', cursive;
+            font-family: "SF Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             font-size: clamp(2rem, 4vw, 3rem);
             line-height: 1.15;
             margin-bottom: 16px;
@@ -514,30 +514,36 @@
 
         .fi-green {
             background: rgba(46, 196, 109, 0.15);
+            color: var(--green);
         }
 
         .fi-blue {
             background: rgba(58, 184, 255, 0.15);
+            color: var(--blue);
         }
 
         .fi-orange {
             background: rgba(255, 123, 46, 0.15);
+            color: var(--orange);
         }
 
         .fi-purple {
             background: rgba(160, 108, 255, 0.15);
+            color: var(--purple);
         }
 
         .fi-yellow {
             background: rgba(255, 217, 61, 0.2);
+            color: #c8900a;
         }
 
         .fi-pink {
             background: rgba(255, 107, 168, 0.15);
+            color: var(--pink);
         }
 
         .feature-title {
-            font-family: 'Fredoka One', cursive;
+            font-family: "SF Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             font-size: 1.35rem;
             margin-bottom: 10px;
             color: var(--dark);
@@ -577,7 +583,7 @@
         }
 
         .ar-text h3 {
-            font-family: 'Fredoka One', cursive;
+            font-family: "SF Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             font-size: 1.9rem;
             color: #fff;
             margin-bottom: 10px;
@@ -731,7 +737,7 @@
             justify-content: center;
             font-size: 2.6rem;
             margin: 0 auto 20px;
-            font-family: 'Fredoka One', cursive;
+            font-family: "SF Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             font-size: 2rem;
             color: white;
             font-weight: 900;
@@ -747,7 +753,7 @@
         }
 
         .team-name {
-            font-family: 'Fredoka One', cursive;
+            font-family: "SF Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             font-size: 1.5rem;
             color: var(--dark);
             margin-bottom: 6px;
@@ -840,7 +846,7 @@
         }
 
         .legal-card h3 {
-            font-family: 'Fredoka One', cursive;
+            font-family: "SF Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             font-size: 1.25rem;
             color: var(--dark);
             margin: 28px 0 10px;
@@ -899,7 +905,7 @@
         }
 
         .footer-logo {
-            font-family: 'Fredoka One', cursive;
+            font-family: "SF Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             font-size: 2rem;
             color: var(--green);
             margin-bottom: 12px;
@@ -1089,15 +1095,15 @@
             transform: scale(1.1);
         }
 
-        .theme-toggle .icon-moon {
-            display: none;
-        }
-
-        [data-theme='dark'] .theme-toggle .icon-sun {
+        .theme-toggle .icon-sun {
             display: none;
         }
 
         [data-theme='dark'] .theme-toggle .icon-moon {
+            display: none;
+        }
+
+        [data-theme='dark'] .theme-toggle .icon-sun {
             display: inline;
         }
 
