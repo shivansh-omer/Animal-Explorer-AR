@@ -1,4 +1,4 @@
-# 🌿 AnimalVerse — Official Website
+# 🌿 Animal Explorer AR — Official Website
 
 The official marketing website for **AnimalVerse**,
 a premium educational iOS app for kids featuring 
@@ -9,3 +9,9 @@ Reality, real animal sounds & gamified quizzes.
 📱 **App Store:** Coming Soon
 
 ---
+
+## 🛠️ Built With
+- HTML5 + CSS3 + Vanilla JavaScript
+- Glassmorphism / Liquid Glass Design System
+- Google Fonts — Fredoka One + Nunito
+- Deployed via GitHub Pages
